@@ -1,0 +1,636 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Web service documentation for smart_erp_test",
+        "version": "1.0",
+        "title": "smart_erp_test",
+        "termsOfService": "",
+        "contact": {
+            "email": ""
+        },
+        "license": {
+            "name": "",
+            "url": ""
+        }
+    },
+    "host": "localhost:3000",
+    "basePath": "",
+    "schemes": ["http", "https"],
+    "tags": [{
+        "name": "User",
+        "description": "Everything about your User",
+        "externalDocs": {
+            "description": "Find out more",
+            "url": "http:\/\/swagger.io"
+        }
+    },  {
+        "name": "links",
+        "description": "Everything about your links",
+        "externalDocs": {
+            "description": "Find out more",
+            "url": "http:\/\/swagger.io"
+        }
+    }, {
+        "name": "Visiter_details",
+        "description": "Everything about your Visiter_details",
+        "externalDocs": {
+            "description": "Find out more",
+            "url": "http:\/\/swagger.io"
+        }
+    }],
+    "paths": {
+        "0": {
+            "name": "login",
+            "description": "login",
+            "externalDocs": {
+                "description": "Find out more",
+                "url": "http:\/\/swagger.io"
+            }
+        },
+        "\/auth/user/login": {
+            "post": {
+                "tags": ["login"],
+                "summary": "login api ",
+                "description": "login api ",
+                "operationId": "login",
+                "consumes": ["application\/json"],
+                "produces": ["application\/json"],
+                "parameters": [{
+                    "in": "body",
+                    "name": "body",
+                    "description": "Login api",
+                    "required": "true",
+                    "schema": {
+                        "$ref": "#\/definitions\/login"
+                    }
+                }],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    },
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "422": {
+                        "description": "Validation Error"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    }
+                },
+                "security": []
+            }
+        },
+        "\/forgot-password": {
+            "post": {
+                "tags": ["login"],
+                "summary": "forgot password api ",
+                "description": "forgot password api ",
+                "operationId": "forgot-password",
+                "consumes": ["application\/json"],
+                "produces": ["application\/json"],
+                "parameters": [{
+                    "in": "body",
+                    "name": "body",
+                    "description": "Login api",
+                    "required": "true",
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "email": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    },
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "422": {
+                        "description": "Validation Error"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    }
+                },
+                "security": []
+            }
+        },
+        "\/verify-reset-password-token\/{token}": {
+            "post": {
+                "tags": ["login"],
+                "summary": "verify reset password token ",
+                "description": "verify reset password token",
+                "operationId": "verify-reset-password-token",
+                "consumes": ["application\/json"],
+                "produces": ["application\/json"],
+                "parameters": [{
+                    "in": "path",
+                    "name": "start",
+                    "description": "Enter token",
+                    "required": "true",
+                    "type": "string",
+                    "default": ""
+                }],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    },
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "422": {
+                        "description": "Validation Error"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    }
+                },
+                "security": []
+            }
+        },
+        "reset-password\/{token}": {
+            "post": {
+                "tags": ["login"],
+                "summary": "Reset password",
+                "description": "Reset password",
+                "operationId": "reset-password",
+                "consumes": ["application\/json"],
+                "produces": ["application\/json"],
+                "parameters": [{
+                    "in": "path",
+                    "name": "start",
+                    "description": "Enter token",
+                    "required": "true",
+                    "type": "string",
+                    "default": ""
+                }],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    },
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "422": {
+                        "description": "Validation Error"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    }
+                },
+                "security": []
+            }
+        },
+        "\/{url_hash}": {
+            "get": {
+                "tags": ["login"],
+                "summary": "Redirect user to its origin url",
+                "description": "Redirect user to its origin url",
+                "operationId": "redirect-to-url",
+                "consumes": ["application\/json"],
+                "produces": ["application\/json"],
+                "parameters": [{
+                    "in": "path",
+                    "name": "url_hash",
+                    "description": "Enter hash url",
+                    "required": "true",
+                    "type": "string",
+                    "default": ""
+                }],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    },
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "422": {
+                        "description": "Validation Error"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    }
+                },
+                "security": []
+            }
+        },
+        "\/user": {
+            "get": {
+                "tags": ["User"],
+                "summary": "get all records of User",
+                "description": "get all records of User",
+                "operationId": "getUser",
+                "consumes": ["application\/json"],
+                "produces": ["application\/json"],
+                "parameters": [{
+                    "in": "query",
+                    "name": "page_number",
+                    "description": "Enter Page Number",
+                    "required": "true",
+                    "type": "string",
+                    "default": "0"
+                }, {
+                    "in": "query",
+                    "name": "page_size",
+                    "description": "Enter Page Size",
+                    "required": "true",
+                    "type": "string",
+                    "default": "10"
+                }],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    },
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "422": {
+                        "description": "Validation Error"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    }
+                },
+                "security": []
+            },
+            "post": {
+                "tags": ["User"],
+                "summary": "Add new record in User",
+                "description": "Add new record in User",
+                "operationId": "addUser",
+                "consumes": ["application\/json"],
+                "produces": ["application\/json"],
+                "parameters": [{
+                    "in": "body",
+                    "name": "body",
+                    "description": "User object need to be added",
+                    "required": "true",
+                    "schema": {
+                        "$ref": "#\/definitions\/User"
+                    }
+                }],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    },
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "422": {
+                        "description": "Validation Error"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    }
+                },
+                "security": []
+            }
+        },
+        "\/user\/{user_id}": {
+            "get": {
+                "tags": ["User"],
+                "summary": "get details User",
+                "description": "get details User",
+                "operationId": "getDetailsOfUser",
+                "consumes": ["application\/json"],
+                "produces": ["application\/json"],
+                "parameters": [{
+                    "in": "path",
+                    "name": "user_id",
+                    "description": "Enter user id",
+                    "required": "true",
+                    "type": "string"
+                }],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    },
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "422": {
+                        "description": "Validation Error"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    }
+                },
+                "security": []
+            },
+            "delete": {
+                "tags": ["User"],
+                "summary": "delete record",
+                "description": "delete record",
+                "operationId": "deleteUser",
+                "consumes": ["application\/json"],
+                "produces": ["application\/json"],
+                "parameters": [{
+                    "in": "path",
+                    "name": "user_id",
+                    "description": "Enter user id",
+                    "required": "true",
+                    "type": "string"
+                }],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    },
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "422": {
+                        "description": "Validation Error"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    }
+                },
+                "security": []
+            },
+            "put": {
+                "tags": ["User"],
+                "summary": "update existing records",
+                "description": "update existing records",
+                "operationId": "updateUser",
+                "consumes": ["application\/json"],
+                "produces": ["application\/json"],
+                "parameters": [{
+                    "in": "path",
+                    "name": "user_id",
+                    "description": "Enter user id",
+                    "required": "true",
+                    "type": "string"
+                }, {
+                    "in": "body",
+                    "name": "body",
+                    "description": "User object need to be added",
+                    "required": "true",
+                    "schema": {
+                        "$ref": "#\/definitions\/User"
+                    }
+                }],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    },
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "422": {
+                        "description": "Validation Error"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    }
+                },
+                "security": []
+            }
+        },
+        "\/links": {
+            "get": {
+                "tags": ["links"],
+                "summary": "get all records of links",
+                "description": "get all records of links",
+                "operationId": "getlinks",
+                "consumes": ["application\/json"],
+                "produces": ["application\/json"],
+                "parameters": [{
+                    "in": "query",
+                    "name": "page_number",
+                    "description": "Enter Page Number",
+                    "required": "true",
+                    "type": "string",
+                    "default": "0"
+                }, {
+                    "in": "query",
+                    "name": "page_size",
+                    "description": "Enter Page Size",
+                    "required": "true",
+                    "type": "string",
+                    "default": "10"
+                }],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    },
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "422": {
+                        "description": "Validation Error"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    }
+                },
+                "security": [{
+                    "api_key": []
+                }]
+            },
+            "post": {
+                "tags": ["links"],
+                "summary": "Add new record in links",
+                "description": "Add new record in links",
+                "operationId": "addlinks",
+                "consumes": ["application\/json"],
+                "produces": ["application\/json"],
+                "parameters": [{
+                    "in": "body",
+                    "name": "body",
+                    "description": "links object need to be added",
+                    "required": "true",
+                    "schema": {
+                        "$ref": "#\/definitions\/links"
+                    }
+                }],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    },
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "422": {
+                        "description": "Validation Error"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    }
+                },
+                "security": [{
+                    "api_key": []
+                }]
+            }
+        },
+        "\/visiter-details": {
+            "get": {
+                "tags": ["Visiter_details"],
+                "summary": "get all records of Visiter_details",
+                "description": "get all records of Visiter_details",
+                "operationId": "getVisiter_details",
+                "consumes": ["application\/json"],
+                "produces": ["application\/json"],
+                "parameters": [{
+                    "in": "query",
+                    "name": "page_number",
+                    "description": "Enter Page Number",
+                    "required": "true",
+                    "type": "string",
+                    "default": "0"
+                }, {
+                    "in": "query",
+                    "name": "page_size",
+                    "description": "Enter Page Size",
+                    "required": "true",
+                    "type": "string",
+                    "default": "10"
+                }],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    },
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "422": {
+                        "description": "Validation Error"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    }
+                },
+                "security": [{
+                    "api_key": []
+                }]
+            }
+        }
+    },
+    "securityDefinitions": {
+        "api_key": {
+            "type": "apiKey",
+            "name": "Authorization",
+            "in": "header"
+        }
+    },
+    "definitions": {
+        "User": {
+            "type": "object",
+            "xml": {
+                "name": "User"
+            },
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "example": "test"
+                },
+                "email": {
+                    "type": "string",
+                    "example": "test"
+                },
+                "password": {
+                    "type": "string",
+                    "example": "test"
+                },
+                "white_label_host": {
+                    "type": "string",
+                    "example": "test"
+                }
+            }
+        },
+        "links": {
+            "type": "object",
+            "xml": {
+                "name": "links"
+            },
+            "properties": {
+                "url": {
+                    "type": "string",
+                    "example": "http://google.com/abcd"
+                }
+            }
+        },
+        "Visiter_details": {
+            "type": "object",
+            "xml": {
+                "name": "Visiter_details"
+            },
+            "properties": {
+                "user_agent": {
+                    "type": "string",
+                    "example": "test"
+                },
+                "http_headers": {
+                    "type": "string",
+                    "example": "test"
+                },
+                "time": {
+                    "type": "string",
+                    "example": "test"
+                },
+                "ip": {
+                    "type": "string",
+                    "example": "test"
+                },
+                "referer": {
+                    "type": "string",
+                    "example": "test"
+                }
+            }
+        },
+        "Search": {
+            "type": "object",
+            "required": ["start", "limit", "where"],
+            "properties": {
+                "start": {
+                    "type": "integer",
+                    "example": "0"
+                },
+                "limit": {
+                    "type": "integer",
+                    "example": "10"
+                },
+                "where": {
+                    "type": "object",
+                    "example": "{'id':'1'}"
+                }
+            },
+            "xml": {
+                "name": "Mobile"
+            }
+        },
+        "ApiResponse": {
+            "type": "object",
+            "properties": {
+                "responseCode": {
+                    "type": "string"
+                },
+                "responseMessage": {
+                    "type": "string"
+                },
+                "data": {
+                    "type": "array"
+                }
+            }
+        },
+        "login": {
+            "type": "object",
+            "properties": {
+                "username": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "externalDocs": {
+        "description": "test",
+        "url": "http:\/\/google.com"
+    }
+}
