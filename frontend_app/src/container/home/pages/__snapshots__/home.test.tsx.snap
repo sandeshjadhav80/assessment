@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render with given state from Redux store 1`] = `
+<div>
+  <div>
+    <h1>
+      Header
+    </h1>
+  </div>
+  <div
+    className="content"
+  >
+    <div
+      className="post-wapper"
+    >
+      <div
+        className="search-box-wrapper clearfix"
+      >
+        <div
+          className="search-box"
+        >
+          <div
+            className="search-icon"
+          >
+            <img
+              alt="Logo"
+              height="30px"
+              onClick={[Function]}
+              src="https://lh3.googleusercontent.com/proxy/WK4x-4FU5oYalQ4cV0nTD8RUGTMA9blAhM9X150CY4QCjR4O8ZhFJAIZV5npEoRGfOfvKcWdiib2IZJqOuete0AMEzQOkGA_lVqEgSrb8Az4wz-9PY4"
+              style={
+                Object {
+                  "cursor": "pointer",
+                  "marginTop": "5px",
+                }
+              }
+              width="30px"
+            />
+          </div>
+          <div
+            className="input-text"
+          >
+            <input
+              className="search-text-box"
+              onChange={[Function]}
+              placeholder="Search..."
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            className="clear-icon"
+          >
+            <img
+              alt="Logo"
+              height="30px"
+              onClick={[Function]}
+              src="https://cdn.iconscout.com/icon/premium/png-256-thumb/clear-16-216586.png"
+              style={
+                Object {
+                  "cursor": "pointer",
+                  "marginTop": "5px",
+                }
+              }
+              width="30px"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="post-content clearfix"
+      >
+        <div
+          className="post-tab-wrapper clearfix"
+        >
+          <button
+            className="tab-buttons"
+            onClick={[Function]}
+          >
+            New Post
+          </button>
+          <button
+            className="tab-buttons"
+            onClick={[Function]}
+          >
+            All Published Post
+          </button>
+        </div>
+        <div
+          className="post-form-wrapper"
+        >
+          <div
+            className="form-row"
+          >
+            <label>
+              Title
+            </label>
+            <div
+              className="form-row-control"
+            >
+              <input
+                onChange={[Function]}
+                style={
+                  Object {
+                    "borderColor": "whitesmoke",
+                  }
+                }
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            className="form-row"
+          >
+            <label>
+              Text
+            </label>
+            <div
+              className="form-row-control"
+            >
+              <input
+                onChange={[Function]}
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            className="form-row"
+          >
+            <div
+              className="form-row-control"
+            >
+              <button
+                className="btn-custom"
+                onClick={[Function]}
+              >
+                Published
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    Footer
+  </div>
+</div>
+`;

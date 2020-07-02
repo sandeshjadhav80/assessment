@@ -1,0 +1,84 @@
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.content {
+    padding: 20px;
+}
+.post-wapper{
+    margin: 0 auto;
+    width: 80%;
+    border: 1px solid whitesmoke;
+}
+.search-box-wrapper {
+    border-bottom: 1px solid whitesmoke;
+    text-align: center;
+}
+.search-box {
+    height: 40px;
+    width: 300px;
+    border: 1px solid whitesmoke;
+    margin: 0 auto;
+}
+.search-icon {
+    float: left;
+    width: 48px;
+    height: 40px;
+    border-right: 1px solid whitesmoke;
+    text-align: center;
+}
+.search-text-box {
+    height: 37px;
+    width: 190px;
+    border: none;
+}
+.input-text {
+    float:left;
+    width: 200px;
+    height: 40px;
+    border-right: 1px solid whitesmoke;
+}
+.clear-icon {
+    float:left;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+}
+.post-tab-wrapper {
+    text-align: center;
+    padding: 15px;
+}
+.tab-buttons {
+    height: 35px;
+    width: 150px;
+    background: whitesmoke;
+    border: 1px solid whitesmoke;
+    cursor: pointer;
+    margin-right: 15px;
+}
+.form-row {
+    padding: 10px;
+}
+.form-row label {
+
+}
+.form-row input {
+    height: 35px;
+    width: 200px;
+    border: 1px solid whitesmoke;
+}
+.btn-custom {
+    height: 35px;
+    width: 75px;
+    background: whitesmoke;
+    border: 1px solid whitesmoke;
+    cursor: pointer;
+}
+.post-list-row {
+    border: 1px solid whitesmoke;
+    padding: 10px;
+}

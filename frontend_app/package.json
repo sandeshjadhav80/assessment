@@ -1,0 +1,81 @@
+{
+  "name": "start_kit3",
+  "version": "0.1.0",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.10.2",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "@mojotech/json-type-validation": "^3.1.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "@types/d3-time-format": "^2.1.1",
+    "@types/jest": "^24.9.1",
+    "@types/node": "^12.12.47",
+    "@types/react": "^16.9.41",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-redux": "^7.1.9",
+    "@types/react-router": "^5.1.8",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/react-select": "^3.0.13",
+    "@types/react-test-renderer": "^16.9.2",
+    "@types/recharts": "^1.8.13",
+    "@types/redux-mock-store": "^1.0.2",
+    "@vx/axis": "0.0.197",
+    "@vx/gradient": "0.0.197",
+    "@vx/group": "0.0.197",
+    "@vx/hierarchy": "0.0.197",
+    "@vx/mock-data": "0.0.197",
+    "@vx/responsive": "0.0.197",
+    "@vx/scale": "0.0.197",
+    "@vx/shape": "0.0.197",
+    "anychart-react": "^1.4.1",
+    "axios": "^0.19.2",
+    "d3-time-format": "^2.2.3",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "react-test-renderer": "^16.13.1",
+    "recharts": "^1.8.5",
+    "redux": "^4.0.5",
+    "redux-mock-store": "^1.5.4",
+    "typescript": "^3.7.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/preset-create-react-app": "^3.1.2",
+    "@storybook/react": "^5.3.19"
+  }
+}
