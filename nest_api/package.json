@@ -37,7 +37,7 @@
     "@types/string-hash": "^1.1.1",
     "@types/webpack-env": "^1.15.1",
     "aws-sdk": "^2.597.0",
-    "bcrypt": "^3.0.7",
+    "bcrypt": "^5.0.0",
     "blob": "0.0.5",
     "class-transformer": "^0.2.3",
     "class-validator": "^0.11.0",
